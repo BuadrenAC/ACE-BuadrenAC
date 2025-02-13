@@ -164,6 +164,9 @@ namespace ACE.Server.Managers
             if (recipe.IsTinkering())
                 return GetTinkerChance(player, source, target, recipe);
 
+            if (recipe.IsAmber())
+                return GetLuminousAmberChance(player, source, target, recipe);
+
             if (!HasDifficulty(recipe))
                 return 1.0;
 
