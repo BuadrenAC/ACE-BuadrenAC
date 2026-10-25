@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using ACE.Database.Models.World;
@@ -25,13 +26,14 @@ namespace ACE.Server.Factories
         private static void MutateAetheria(WorldObject wo, TreasureDeath profile)
         {
             wo.ItemMaxLevel = AetheriaChance.Roll_ItemMaxLevel(profile);
+		}
 
         private static void MutateAetheria(WorldObject wo, int tier)
         {
             // Initial roll for an Aetheria level 1 through 3
             wo.ItemMaxLevel = 1;
 
-            var rng = ThreadSafeRandom.Next(1, 7);
+            var rng = Random.Shared.Next(1, 7);
 
             if (rng > 3)
             {
@@ -44,10 +46,10 @@ namespace ACE.Server.Factories
             // Perform an additional roll check for a chance at a higher Aetheria level for tiers 6+
             if (tier > 5)
             {
-                if (ThreadSafeRandom.Next(1, 50) > 40)
+                if (Random.Shared.Next(1, 50) > 40)
                 {
                     wo.ItemMaxLevel = 4;
-                    if (tier > 6 && ThreadSafeRandom.Next(1, 5) == 1)
+                    if (tier > 6 && Random.Shared.Next(1, 5) == 1)
                     {
                         wo.ItemMaxLevel = 5;
                     }

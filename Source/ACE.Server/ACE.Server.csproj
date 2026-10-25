@@ -292,9 +292,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="C:\Users\admin\source\repos\Compare\Enlightenment-Old.cs" Link="Enlightenment-Old.cs" />
-    <Compile Include="C:\Users\admin\source\repos\Compare\Fellowship-Old.cs" Link="Fellowship-Old.cs" />
-    <Compile Include="C:\Users\admin\source\repos\Compare\LootGenerationFactory_Clothing-Old.cs" Link="LootGenerationFactory_Clothing-Old.cs" />
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">

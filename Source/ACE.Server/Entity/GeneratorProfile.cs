@@ -272,6 +272,8 @@ namespace ACE.Server.Entity
             }
 
             var spawned = new List<WorldObject>();
+			
+			if (objects == null) return spawned;
 
             foreach (var obj in objects)
             {

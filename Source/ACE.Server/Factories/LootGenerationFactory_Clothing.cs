@@ -79,8 +79,8 @@ namespace ACE.Server.Factories
                 MutateArmorModVsType(wo, profile);
 
             // Assign equipment set before magic, so we can use different spell tables based on the set it rolls
-            if (profile.Tier > 6 && armorType != LootTables.ArmorType.SocietyArmor)
-                TryRollEquipmentSet(wo, profile, roll);
+            //if (profile.Tier > 6 && armorType != LootTables.ArmorType.SocietyArmor)
+            //    TryRollEquipmentSet(wo, profile, roll);
 
             if (isMagical)
             {
